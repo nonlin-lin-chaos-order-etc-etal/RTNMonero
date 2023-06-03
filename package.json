@@ -1,5 +1,5 @@
 {
-  "name": "rnnewarchitectureapp",
+  "name": "rtn-monero",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -26,5 +26,13 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "codegenConfig": {
+    "name": "RTNMoneroSpec",
+    "type": "modules",
+    "jsSrcsDir": "js",
+    "android": {
+      "javaPackageName": "rtnmonero"
+    }
   }
 }

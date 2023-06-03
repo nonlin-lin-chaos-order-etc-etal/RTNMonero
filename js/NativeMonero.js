@@ -12,4 +12,4 @@ export interface Spec extends TurboModule {
   answerTheUltimateQuestion(input: string): number;
 }
 
-export default (TurboModuleRegistry.get<Spec>('NativeAnswerSolver'): ?Spec);
+export default (TurboModuleRegistry.get<Spec>('NativeMonero'): ?Spec);
