@@ -1,6 +1,6 @@
 {
   "name": "rtn-monero",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
@@ -9,10 +9,11 @@
     "test": "jest",
     "lint": "eslint ."
   },
+  "react-native": "js/NativeMonero",
+  "source": "js/NativeMonero",
   "dependencies": {
     "react": "17.0.2",
-    "react-native": "0.0.0-20220201-2008-79975d146",
-    "react-native-gradle-plugin": "^0.0.4"
+    "react-native": "0.0.0-20220201-2008-79975d146"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9",
@@ -26,6 +27,10 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "peerDependencies": {
+    "react": "*",
+    "react-native": "*"
   },
   "codegenConfig": {
     "name": "RTNMoneroSpec",

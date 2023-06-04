@@ -1,21 +1,29 @@
-package com.rnnewarchitectureapp.modules;
+package rtnmonero.modules;
 
 import androidx.annotation.NonNull;
 
 import com.facebook.react.bridge.ReactApplicationContext;
-import com.rnnewarchitectureapp.codegen.NativeAnswerSolverSpec;
+import rtnmonero.NativeMoneroSpec;
 
-public class NativeAnswerSolver extends NativeAnswerSolverSpec {
+import com.facebook.proguard.annotations.DoNotStrip;
+import com.facebook.react.bridge.Promise;
+import com.facebook.react.bridge.ReactApplicationContext;
+import com.facebook.react.bridge.ReactContextBaseJavaModule;
+import com.facebook.react.bridge.ReactMethod;
+import com.facebook.react.bridge.ReactModuleWithSpec;
+import com.facebook.react.turbomodule.core.interfaces.TurboModule;
 
-    public static final String NAME = "NativeAnswerSolver";
+public class NativeMonero extends NativeMoneroSpec {
 
-    public NativeAnswerSolver(ReactApplicationContext reactContext) {
+    public static final String NAME = "NativeMonero";
+
+    public NativeMonero(ReactApplicationContext reactContext) {
         super(reactContext);
     }
 
     @Override
-    public double answerTheUltimateQuestion(String input) {
-        return 42.0;
+    public void answerTheUltimateQuestion(String input, Promise promise) {
+        promise.resolve(42.0);
     }
 
     @NonNull
